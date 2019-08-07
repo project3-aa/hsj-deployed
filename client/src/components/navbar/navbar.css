@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap');
+
+body{
+  margin: 0 auto;
+}
+
+
+nav img{
+  height: 55px;
+}
+
+ul{
+  padding-right: 20px;
+}
+
+nav{
+  background-image: url('/images/nav1.jpeg');
+}
+
+.btn{
+  margin-left: 12px;
+}
