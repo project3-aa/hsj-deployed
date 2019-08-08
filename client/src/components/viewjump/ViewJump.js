@@ -125,6 +125,25 @@ class ViewJump extends Component {
       });
   }
 
+  renderDelete(){
+    if(this.props.theUser._id === this.state.theJump.ownerId){
+      return  <button
+      onClick= {(e) => {
+        this.deleteJump();
+      }}
+    >
+      Delete whole jump!
+    </button>
+    }
+  }
+
+  renderEdit(){
+    if(this.props.theUser._id === this.state.theJump.ownerId){
+      return <button> <Link to={`/editJump/${this.state.theJump._id}`}>Edit This Jump</Link></button>
+    }
+  }
+
+
   render() {
     if (this.state.theJump) {
       console.log('1Jump',this.state.theJump)
@@ -144,14 +163,8 @@ class ViewJump extends Component {
             {/* {this.renderSkipEdit()} */}
             {this.renderSkipAdd()}
           </div>
-          <button> <Link to={`/editJump/${this.state.theJump._id}`}>Edit This Jump</Link></button>
-          <button
-          onClick= {(e) => {
-            this.deleteJump();
-          }}
-        >
-          Delete whole jump!
-        </button>
+        {this.renderEdit()}
+        {this.renderDelete()}
         </div>
       );
     } else {

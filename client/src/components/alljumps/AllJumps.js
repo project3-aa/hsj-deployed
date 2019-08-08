@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-// import {Link, NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import axios from 'axios';
 import ('./alljumps.css');
 
@@ -23,7 +23,9 @@ class AllJumps extends Component {
           console.log(err)
         })
   }
-  
+
+
+ 
   
 
 
@@ -33,7 +35,6 @@ class AllJumps extends Component {
       <div>
         {
           this.state.jumps.map( jump => {
-            console.log(jump.image)
             return (
               <div class="card allUserJumpsCard">
               <img src={jump.image} class="card-img-top" alt="..."/>
@@ -42,9 +43,10 @@ class AllJumps extends Component {
                 <p>{jump.duration} Days</p>
                 <p class="card-text">{jump.description}</p>
               </div>
-              <div class="card-body">
-                <a href="/" class="card-link">View this Jump</a>
-                
+              <div class="card-action">
+              <Link key={jump._id} to={`/viewJump/${jump._id}`} className='homelink'>
+              View this Jump
+             </Link>
               </div>
               </div>
             )
