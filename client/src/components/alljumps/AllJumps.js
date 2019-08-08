@@ -24,22 +24,11 @@ class AllJumps extends Component {
         })
   }
   
-  // showAllJumps = () => {
-  //   console.log(this.props)
-  //   // const allTheJumps= this.props.allJumps
-  //   // return allTheJumps.map((jump ) => {
-  //   //   return(
-  //   //     // console.log(allTheJumps)
-  //   //     <div>
-  //   //       <h1> IDK LOL</h1>
-  //   //     </div>
-  //   //   )
-  //   // })
-    
-  // }
+  
+
 
   render(){
-
+    console.log(this.state.jumps)
     return(
       <div>
         {

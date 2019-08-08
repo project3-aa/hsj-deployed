@@ -15,7 +15,7 @@ class UserHomepage extends Component {
 
   getAllUserJumps(id){
     
-  axios.get(`${process.env.REACT_APP_BASE}jump/userJumps/${id}`)
+  axios.get(`${process.env.REACT_APP_BASE}/jump/userJumps/${id}`)
     .then((allTheJumps) => {
       this.setState({userJumps: allTheJumps.data});
     })
@@ -72,7 +72,7 @@ class UserHomepage extends Component {
 
     getTotalUserSkips(){
       let totalUserSkips = 0;
-      let theJumps = this.state.userJumps
+      let theJumps = this.state.userJumps;
       theJumps.forEach((eachJump)=>{
         return totalUserSkips += eachJump.skip.length;
       })
@@ -89,6 +89,7 @@ class UserHomepage extends Component {
 
 
   render(){
+    console.log(this.state)
     return(
       <div className="userHome">
         <div className="userLinks">
@@ -104,12 +105,9 @@ class UserHomepage extends Component {
           {this.showAllUserJumps()}
         </div>
 
-
       </div>
     )
-
   }
-
 }
 
 export default UserHomepage; 
