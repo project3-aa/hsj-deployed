@@ -1,0 +1,1 @@
+{"version":3,"sources":["alljumps.css"],"names":[],"mappings":"AAAA,kBACE,qBACF,CAEA,cACE,oBACF,CACA,WACE,iBACF","file":"5.8de2a4ef.chunk.css","sourcesContent":[".allUserJumpsCard{\n  width: 21rem !important;\n}\n\n.card-img-top{\n  width: 100% !important;\n}\n.card-body{\n  text-align: center;\n}"]}
