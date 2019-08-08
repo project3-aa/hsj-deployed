@@ -23,8 +23,8 @@ class HomePage extends Component {
       <div>
 
         <header id="navOverlay" className="navHeader">
-          <div className="navOneLiner typewriter">
-            <h3>Be a travler,<br/> not a tourist.</h3>
+          <div className="typewriter navOneLiner">
+            <h3>Be a travler, <br/>not a tourist.</h3>
           </div>
         </header>
             <div id="mid-body" className= "flex-container">

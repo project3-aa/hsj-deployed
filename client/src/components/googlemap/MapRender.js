@@ -21,7 +21,7 @@ const {
 
 const MapWithADirectionsRenderer = compose(
   withProps({
-    googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyA2SqfKVOZHGnepyNleZCOow87eXk04HVs&v=3.exp&libraries=geometry,drawing,places",
+    googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyA2SqfKVOZHGnepyNleZCOow87eXk04HVs&v=3.exp&libraries=geometry,drawing,places&maptype=roadmap&style=feature:landscape.man_made%7Csaturation:-5&style=feature:landscape.natural%7Ccolor:0x00ff00%7Csaturation:-45%7Clightness:95&style=feature:landscape.natural%7Celement:labels.icon%7Ccolor:0xfef9fd&style=feature:landscape.natural.landcover%7Ccolor:0xef6b75%7Csaturation:60%7Clightness:80&style=feature:landscape.natural.terrain%7Csaturation:50%7Clightness:95&style=feature:road%7Ccolor:0x006cff%7Csaturation:100%7Clightness:70&style=feature:water%7Ccolor:0x00ace4%7Csaturation:100%7Clightness:55&size=480x360",
     loadingElement: <div style={{ height: `100%` }} />,
     containerElement: <div style={{ height: `400px` }} />,
     mapElement: <div style={{ height: `100%` }} />,
