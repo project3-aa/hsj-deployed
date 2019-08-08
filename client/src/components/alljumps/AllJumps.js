@@ -35,7 +35,7 @@ class AllJumps extends Component {
           this.state.jumps.map( jump => {
             console.log(jump.image)
             return (
-              <div class="card">
+              <div class="card allUserJumpsCard">
               <img src={jump.image} class="card-img-top" alt="..."/>
               <div class="card-body">
                 <h5 class="card-title">{jump.start} <i  id="plane" className="material-icons prefix">airplanemode_active</i> {jump.end}</h5>

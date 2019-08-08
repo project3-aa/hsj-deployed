@@ -41,20 +41,19 @@ class UserHomepage extends Component {
         // return <h1>Jump Title: {eachJump.skip[0].city} ===>>> {eachJump.skip[eachJump.skip.length -1].city}</h1>
         // }
 
-        return <div key={eachJump._id} class="card">
-              <img src={eachJump.image} class="card-img-top" alt="..."/>
-              <div class="card-body">
-                <h5 class="card-title">{eachJump.start} <i  id="plane" className="material-icons prefix">airplanemode_active</i> {eachJump.end}</h5>
-                <p>{eachJump.duration} Days</p>
-                <p class="card-text">{eachJump.description}</p>
-              </div>
-              <div class="card-body">
-              <Link to={`/viewJump/${eachJump._id}`} className='homelink'>
-                View this Jump
-                </Link>
-              </div>
-              </div>
-
+        return <div key={eachJump._id} class="card eachUserCard">
+        <img src={eachJump.image} className="card-img-top" alt="..."/>
+        <div className="card-body">
+          <h5 className="card-title">{eachJump.start} <i  id="plane" className="material-icons prefix cardPlane">airplanemode_active</i> {eachJump.end}</h5>
+          <p>{eachJump.duration} Days</p>
+          <p className="card-text">{eachJump.description}</p>
+        </div>
+        <div className="card-action">
+        <Link to={`/viewJump/${eachJump._id}`} className='homelink'>
+          View this Jump
+          </Link>
+        </div>
+        </div>
 })
 }
 
@@ -98,10 +97,13 @@ class UserHomepage extends Component {
         </div>
         <hr/>
 
-        <span>Travler {this.props.theUser.username}!</span>
-        <div>You have {this.getTotalUserJumps()} lifetime Jumps</div>
-        <div>And {this.getTotalUserSkips()} lifetime skips</div>
-        <div>
+        <p>Travler {this.props.theUser.username}</p>
+          <div className="lifeTime">
+            <p> {this.getTotalUserJumps()} lifetime Jumps</p>
+            <hr/>
+            <p> {this.getTotalUserSkips()} lifetime skips</p>
+          </div>
+        <div className="allUserCards">
           {this.showAllUserJumps()}
         </div>
 

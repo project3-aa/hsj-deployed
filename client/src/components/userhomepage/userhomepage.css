@@ -1,3 +1,5 @@
+@import url("https://use.typekit.net/wlf2zut.css");
+
 .userHome{
   margin-top: 50px;
 }
@@ -20,4 +22,46 @@ hr{
   color: #bbb !important;
   background-color: #bbb !important;
   width: 65%;
+}
+
+.userHome p {
+  text-align: center !important;
+  margin-top: 1px !;
+}
+
+
+.allUserCards{
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+}
+
+.eachUserCard{
+  margin-left: 25px !important;
+  width: 25rem !important;
+}
+
+.card-img-top{
+  height: 50% !important;
+}
+
+.card-text{
+  margin: 1px 35px;
+}
+
+.lifeTime{
+display: flex;
+padding: 20px 350px;
+}
+
+.lifeTime p {
+  font-family: relation-two, sans-serif;
+  font-size: 20px;
+  margin-top: -5px;
+  color: #4CAF50;
+}
+
+.cardPlane{
+  color: #4CAF50 !important;
+  font-size: 16px !important;
 }
