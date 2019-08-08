@@ -24,12 +24,15 @@ mongoose
 const app_name = require('./package.json').name;
 const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.')[0]}`);
 
+
 const app = express();
 
 // Middleware Setup
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
     
 
 
@@ -64,7 +67,7 @@ const hopRoutes = require('./routes/hopRoutes');
 app.use('/api/hop', hopRoutes);
 
 app.use((req, res, next) => {
-  res.sendFile(_dirname + "/public/index.html");
+  res.sendFile(__dirname + "/public/index.html");
 });
 
 module.exports = app;
