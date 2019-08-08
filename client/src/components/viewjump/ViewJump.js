@@ -20,7 +20,7 @@ class ViewJump extends Component {
   getSingleJumpInfo = () => {
     axios
       .get(
-        "http://localhost:5000/api/jump/details/" + this.props.match.params.id
+        `${process.env.REACT_APP_BASE}/jump/details/` + this.props.match.params.id
       )
       .then(theSingleJump => {
         this.setState({ theJump: theSingleJump.data });
@@ -114,7 +114,7 @@ class ViewJump extends Component {
     // if(!window.confirm('Are you sure you want to delete the whole Jump?'))e.preventDefault()
     axios
       .post(
-        "http://localhost:5000/api/jump/deleteJump/" + this.state.theJump._id
+        `${process.env.REACT_APP_BASE}/jump/deleteJump/` + this.state.theJump._id
       )
       .then(theJumpToDelete => {
         // console.log("sucessfully deleted", theJumpToDelete);
@@ -127,7 +127,7 @@ class ViewJump extends Component {
 
   render() {
     if (this.state.theJump) {
-      // console.log('asdfasdf',this.state.skipCityArray)
+      console.log('1Jump',this.state.theJump)
       return (
         <div>
           <MappyMap renderSkips={this.state.skipCityArray}/>

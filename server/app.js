@@ -13,7 +13,7 @@ require('./config/passport-login');
 
 
 mongoose
-  .connect('mongodb://localhost/hsj-api-backend', {useNewUrlParser: true})
+  .connect(process.env.MONGODB_URI, {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -47,7 +47,7 @@ app.use(passport.session());
 
 app.use(cors({
   credentials: true,
-  origin: ['http://localhost:3000', 'https://blah.herokuapp.com']
+  origin: ['http://localhost:3000', 'https://hop-skip-and-jump.herokuapp.com']
 }));
 
 
@@ -62,5 +62,9 @@ app.use('/api/skip', skipRoutes);
 
 const hopRoutes = require('./routes/hopRoutes');
 app.use('/api/hop', hopRoutes);
+
+app.use((req, res, next) => {
+  res.sendFile(_dirname + "/public/index.html");
+});
 
 module.exports = app;

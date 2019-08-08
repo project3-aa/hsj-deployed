@@ -15,7 +15,7 @@ class EditHop extends Component {
   handleFormSubmit = (event) => {
     event.preventDefault();
     // console.log(this.state);
-    axios.post("http://localhost:5000/api/hop/updateHop/" + this.props.location.state.hopId, {
+    axios.post(`${process.env.REACT_APP_BASE}/hop/updateHop/` + this.props.location.state.hopId, {
       poi: this.state.poi,
       arrivedBy: this.state.arrivedBy,
       description: this.state.description,

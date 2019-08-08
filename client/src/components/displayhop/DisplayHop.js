@@ -15,7 +15,7 @@ class DisplayHop extends Component{
 
 
   deleteHop(id) {
-    axios.post("http://localhost:5000/api/hop/deleteHop/" + this.props.hopOwner + "/" + id)
+    axios.post(`${process.env.REACT_APP_BASE}/hop/deleteHop/` + this.props.hopOwner + "/" + id)
       .then(theHopToDelete => {
         this.props.showJumpAgain()
       })

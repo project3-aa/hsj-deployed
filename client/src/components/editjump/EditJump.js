@@ -14,7 +14,7 @@ class EditJump extends Component {
   
   componentDidMount() {
     axios.get(
-        "http://localhost:5000/api/jump/details/" + this.props.match.params.id
+      `${process.env.REACT_APP_BASE}/jump/details/` + this.props.match.params.id
       )
       .then(thisSingleJump => {
         // console.log(thisSingleJump.data);
@@ -33,7 +33,8 @@ class EditJump extends Component {
   handleFormSubmit = (event) => {
     event.preventDefault();
     // console.log(this.props)
-    axios.post(`http://localhost:5000/api/jump/updateJump/${this.props.match.params.id}`,
+    // `http://localhost:5000/api/jump/updateJump/${this.props.match.params.id}`
+    axios.post(`${process.env.REACT_APP_BASE}/jump/updateJump/${this.props.match.params.id}`,
      {  startCity: this.state.start,
       endCity: this.state.end,
       jumpDuration: this.state.duration,

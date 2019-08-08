@@ -45,7 +45,7 @@ class DisplaySkip extends Component {
   deleteSkip(id) {
     axios
       .post(
-        "http://localhost:5000/api/skip/deleteSkip/" +
+        `${process.env.REACT_APP_BASE}/skip/deleteSkip/` +
           this.props.jumpId +
           "/" +
           id

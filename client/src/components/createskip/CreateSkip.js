@@ -22,7 +22,7 @@ class CreateSkip extends Component {
   handleFormSubmit = (event) => {
     event.preventDefault();
     // console.log(this.state);
-    axios.post("http://localhost:5000/api/skip/newSkip", {
+    axios.post(`${process.env.REACT_APP_BASE}/skip/newSkip`, {
       skipCity: this.state.newSkipCity,
       skipArrive: this.state.newSkipArrive,
       skipDuration: this.state.newSkipDuration,
@@ -57,17 +57,17 @@ class CreateSkip extends Component {
     return (
       <div>
           <div>
-          <Button href="#modal5" className="modal-trigger">
+          <Button href="#createSkip" className="modal-trigger">
           Create new Skip
           </Button>
-          <Modal id="modal5">   
-      <div>
-         <h3>CreateSkip</h3>
+          <Modal id="createSkip">   
+      <div className="createSkipContent">
+         <h3>Create Skip</h3>
           <div className="createSkip">
 
             <form onSubmit={this.handleFormSubmit}>
 
-              <div className="input-field col s12">
+              <div className="createSkip-input-field input-field col s12">
                 <input id="city" type="text" className="validate" name="newSkipCity" value={this.state.newSkipCity} onChange={ e => this.handleChange(e)} required/>
                 <label htmlFor="city">City</label>
               </div>
@@ -77,8 +77,8 @@ class CreateSkip extends Component {
                 <label htmlFor="arriveBy">Arrived By</label>
               </div> */}
 
-                 <Select name="newSkipArrive" onChange={this.handleChange} required> 
-                  <option value="" active>
+                 <Select className="arriveSelect" name="newSkipArrive" onChange={this.handleChange} required> 
+                  <option className="arriveOption" value="" active>
                   Arrived By:
                   </option>
                   <option value="Car" >
@@ -92,16 +92,16 @@ class CreateSkip extends Component {
                   </option>
                   </Select>
               
-              <div className="input-field col s12">
+              <div className="createSkip-input-field input-field col s12">
                 <input id="skipDuration" type="number" className="validate" name="newSkipDuration" value={this.state.newSkipDuration} onChange={e => this.handleChange(e)} required/>
                 <label htmlFor="skipduration">Duration</label>
               </div>
             
-              <div className="input-field col s12">
-                <textarea id="textarea3" className="materialize-textarea"  name="newSkipDescription" value={this.state.newSkipDescription} onChange={ e => this.handleChange(e)} required/>
+              <div className="createSkip-input-field input-field col s12">
+                <textarea id="textarea3" className="materialize-textarea descriptionTextArea"  name="newSkipDescription" value={this.state.newSkipDescription} onChange={ e => this.handleChange(e)} required/>
                 <label htmlFor="textarea3">Describe Your Adventure</label>
               </div>
-             <button className="btn modal-close">Add Skip</button>
+             <button className="addSkip btn modal-close">Add Skip</button>
             </form>
           </div>
         </div>

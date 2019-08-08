@@ -40,7 +40,7 @@ class EditSkip extends Component {
   handleFormSubmit = (event) => {
     event.preventDefault();
     // console.log(this.state);
-    axios.post("http://localhost:5000/api/skip/updateSkip/" + this.props.location.state.skipId, {
+    axios.post(`${process.env.REACT_APP_BASE}/skip/updateSkip/` + this.props.location.state.skipId, {
       skipCity: this.state.city,
       skipArrive: this.state.arrive,
       skipDuration: this.state.duration,
