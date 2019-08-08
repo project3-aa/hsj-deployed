@@ -12,6 +12,7 @@ router.post('/signup', (req, res, next) => {
   const password = req.body.password;
 
   if (!userNameVar || !password) {
+      console.log('no creds')
     res.status(400).json({ message: 'Provide username and password' });
     return;
   }
@@ -24,6 +25,7 @@ router.post('/signup', (req, res, next) => {
       }
 
       if (foundUser) {
+          console.log('already taken')
           res.status(400).json({ message: 'Username taken. Choose another one.' });
           return;
       }
@@ -38,6 +40,7 @@ router.post('/signup', (req, res, next) => {
 
       aNewUser.save(err => {
           if (err) {
+              console.log('ahhhhhh')
               res.status(400).json({ message: 'Saving user to database went wrong.' });
               return;
           }
