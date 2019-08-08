@@ -51,7 +51,7 @@ app.use(cors({
 }));
 
 
-const userRoutes = require('./routes/userRoutes');
+const userRoutes = require('./routes/UserRoutes');
 app.use('/api/auth', userRoutes);
 
 const jumpRoutes = require('./routes/jumpRoutes');
