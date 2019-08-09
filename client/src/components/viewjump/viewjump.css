@@ -74,3 +74,14 @@
   display: flex;
   justify-content: center;
 }
+
+
+
+
+/* @media screen and (min-width: 1025px)  {
+.jumpInOut {
+  display: flex;
+  flex-direction: column;
+  width: 1041px;
+}
+} */

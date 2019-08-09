@@ -146,3 +146,9 @@ footer {
   width: 250px;
   padding: 5px;
 }
+
+/* @media screen and (min-width: 1025px)  {
+  .navOneLiner h3 {
+    padding-top: 370px;
+  }
+} */

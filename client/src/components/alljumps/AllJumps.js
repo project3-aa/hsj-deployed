@@ -32,7 +32,7 @@ class AllJumps extends Component {
   render(){
     console.log(this.state.jumps)
     return(
-      <div classNAme="allCards">
+      <div className="allCards">
         {
           this.state.jumps.map( jump => {
             return (
