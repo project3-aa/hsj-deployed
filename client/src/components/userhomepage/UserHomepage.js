@@ -27,7 +27,11 @@ class UserHomepage extends Component {
 
 
     componentDidMount(){
-      this.getAllUserJumps(this.props.theUser._id);
+      setTimeout(()=>{
+        this.getAllUserJumps(this.props.theUser._id);
+
+      },200)
+
     }
 
  
