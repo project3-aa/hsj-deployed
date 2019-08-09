@@ -16,5 +16,13 @@
   text-align: center;
 }
 
+.allCards {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  margin-top: 80px !important;
+  padding: 12px 110px !important;
+ }
+
 
 
