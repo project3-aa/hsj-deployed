@@ -113,13 +113,13 @@ class CreateJump extends Component {
         <div className="input-field col s6">
           <i  id="plane" className="material-icons prefix">airplanemode_active</i>
           <input id="icon_plane" type="text" className="validate" name="newStart" value={this.state.newStart} onChange={ e => this.handleChange(e)} required/>
-          <label htmlFor="icon_plane">Flew into</label>
+          <label htmlFor="icon_plane">City of departure</label>
         </div>
 
         <div className="input-field col s6">
           <i  id="plane" className="material-icons prefix">airplanemode_active</i>
           <input id="icon_plane2" type="text" className="validate" name="newEnd" value={this.state.newEnd} onChange={e => this.handleChange(e)} required/>
-          <label htmlFor="icon_plane2">Flew out of</label>
+          <label htmlFor="icon_plane2">City of arrival </label>
         </div>
 
         <div className="input-field col s12">
