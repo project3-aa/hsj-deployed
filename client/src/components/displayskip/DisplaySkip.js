@@ -59,14 +59,36 @@ class DisplaySkip extends Component {
       });
   }
 
-  // renderEditButton = () =>{
-  //   console.log('THere should be an edit buton here===========',this.props.theUser,  this.props.theSkipInfo, this.props.theUser._id);
-  //   if(this.props.theUser && this.props.theSkipInfo.ownerId === this.props.theUser._id){
-  //     return <button>edit me</button>
-  //   } else {
-  //     return null
-  //   }
-  // }
+  renderDeleteButton = () =>{
+
+    if(this.props.theUser && this.props.jumpOwner === this.props.theUser._id){
+      return <button
+      onClick={() => {
+        this.deleteSkip(this.props.theSkipInfo._id);
+      }}
+    >
+      Delete Skip
+    </button>
+    }
+  }
+
+
+
+  renderEditButton = () =>{
+
+    if(this.props.theUser && this.props.jumpOwner === this.props.theUser._id){
+      return  <button><Link to={{
+        pathname: `/editSkip/${this.props.theSkipInfo.jumpOwner}`, 
+        state: {
+          skipId: this.props.theSkipInfo._id,
+          city: this.props.theSkipInfo.city,
+          arrivedBy: this.props.theSkipInfo.arrivedBy,
+          duration: this.props.theSkipInfo.duration, 
+          description: this.props.theSkipInfo.description
+        }}
+      }>Edit This Skip</Link></button>
+    }
+  }
 
   render() {
     // console.log('this is the skip info----',this.props) //<<<<this returns info!!!!!!

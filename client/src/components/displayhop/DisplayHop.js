@@ -24,6 +24,36 @@ class DisplayHop extends Component{
       });
   }
 
+  renderDeleteButton = () =>{
+
+    if(this.props.theUser && this.props.jumpOwner === this.props.theUser._id){
+      return <button
+      onClick={() => {
+        this.deleteHop(this.props.theHopInfo._id);
+      }}>
+      Delete Hop
+    </button>
+    }
+  }
+
+  renderEditButton = () =>{
+
+    if(this.props.theUser && this.props.jumpOwner === this.props.theUser._id){
+      return <button><Link to={{
+        pathname: `/editHop/${this.props.jumpOwner}`,
+        state:{
+          hopId: this.props.theHopInfo._id,
+          POI: this.props.theHopInfo.poi,
+          arrivedBy: this.props.theHopInfo.arrivedBy,
+          description: this.props.theHopInfo.description,
+        }
+      }}>Edit This Hop</Link></button>
+    }
+  }
+
+
+  
+
 
   render(){
     return(

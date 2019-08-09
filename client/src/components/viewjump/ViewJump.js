@@ -125,6 +125,25 @@ class ViewJump extends Component {
       });
   }
 
+  renderDelete(){
+    if(this.props.theUser._id === this.state.theJump.ownerId){
+      return  <button
+      onClick= {(e) => {
+        this.deleteJump();
+      }}
+    >
+      Delete whole jump!
+    </button>
+    }
+  }
+
+  renderEdit(){
+    if(this.props.theUser._id === this.state.theJump.ownerId){
+      return <button> <Link to={`/editJump/${this.state.theJump._id}`}>Edit This Jump</Link></button>
+    }
+  }
+
+
   render() {
     if (this.state.theJump) {
       return (
