@@ -113,10 +113,10 @@ class DisplaySkip extends Component {
                 duration: this.props.theSkipInfo.duration, 
                 description: this.props.theSkipInfo.description
               }}
-            } className="editSkipBtn"><i class="material-icons editLocation">
+            } className="editSkipBtn"><i className="material-icons editLocation">
                   edit_location
                   </i></Link>
-                  <i class="material-icons deleteSkip"  onClick={() => {
+                  <i className="material-icons deleteSkip"  onClick={() => {
                     this.deleteSkip(this.props.theSkipInfo._id);
                   }}>delete</i>
                   </div>

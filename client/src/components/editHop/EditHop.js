@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import './edithop.css'
 
 class EditHop extends Component {
   constructor(props){
@@ -34,7 +35,9 @@ class EditHop extends Component {
   render() {
     console.log(this.state);
     return (
-      <div>
+      <div className="editHop">
+      <div className="editHopContent">
+        <h3>Edit Hop</h3>
       <form onSubmit={this.handleFormSubmit}>
         <label>Point of Interest</label>
         <input type="text" name="poi" value={this.state.poi} onChange={(e)=>{this.handleChange(e)}}></input>
@@ -42,9 +45,10 @@ class EditHop extends Component {
         <input type="text" name="arrivedBy" value={this.state.arrivedBy} onChange={(e)=>{this.handleChange(e)}}></input>
         <label>Description</label>
         <input type="text" name="description" value={this.state.description} onChange={(e)=>{this.handleChange(e)}}></input>
-        <button className="btn" type="submit">Save Changes</button>
+        <button className="btn saveEditHop" type="submit">Save Changes</button>
       </form>
     </div>
+      </div>
     )
   }
 }

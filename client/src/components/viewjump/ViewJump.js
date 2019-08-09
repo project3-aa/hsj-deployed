@@ -39,8 +39,8 @@ class ViewJump extends Component {
     let skipLength = Object.keys(this.state.theJump.skip).length;
     if (skipLength > 1) {
       return (
-        <h1>
-          Jump Title: {this.state.theJump.skip[0].city} ===>>>{" "}
+        <h1 className="jumpTitle">
+          {this.state.theJump.skip[0].city}<i  id="plane" className="material-icons prefix titlePlane">airplanemode_active</i>{" "}
           {this.state.theJump.skip[this.state.theJump.skip.length - 1].city}
         </h1>
       );
@@ -162,9 +162,15 @@ class ViewJump extends Component {
                  {this.state.theJump.end}</h2>
                 <p>Total travel time: {this.state.theJump.duration} Days.</p>
                 <h5>{this.state.theJump.description}</h5>
-          <Link to={`/editJump/${this.state.theJump._id}`} className="editJumpBtn"><i class="material-icons editJumpLocation">
-        edit_location
-        </i></Link>
+                <div className="jumpDeleteEdit">
+                  <Link to={`/editJump/${this.state.theJump._id}`} className="editJumpBtn"><i className="material-icons editJumpLocation">
+                edit_location
+                </i></Link>
+                <i className="material-icons deleteJump"  onClick= {(e) => {
+                    this.deleteJump();
+                  }}>delete</i>
+                </div>
+
             </div>
             </div>
             <hr/>
@@ -179,10 +185,9 @@ class ViewJump extends Component {
           <div>
             
           </div>
-
-          <i class="material-icons deleteJump"  onClick= {(e) => {
+          {/* <i className="material-icons deleteJump"  onClick= {(e) => {
             this.deleteJump();
-          }}>delete</i>
+          }}>delete</i> */}
         
         </div>
       );

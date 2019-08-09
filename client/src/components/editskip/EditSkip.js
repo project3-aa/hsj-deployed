@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
+import './editskip.css';
 // import {Link, NavLink} from 'react-router-dom';
 import axios from 'axios';
 // import ('./createskip.css');
 import 'materialize-css';
-
-
 
 
 
@@ -61,9 +60,10 @@ class EditSkip extends Component {
 
 
   render() {
-    console.log('PROPS IN THE SKIP',this.props);
     return (
-      <div>
+      <div className="editSkipContent">
+      <div className="editSkipForm">
+        <h3>Edit Skip</h3>
       <form onSubmit={this.handleFormSubmit}>
         <label>City</label>
         <input type="text" name="city" value={this.state.city} onChange={this.handleChange}></input>
@@ -73,9 +73,10 @@ class EditSkip extends Component {
         <input type="number" name="duration" value={this.state.duration} onChange={this.handleChange}></input>
         <label>Description</label>
         <input type="text" name="description" value={this.state.description} onChange={this.handleChange}></input>
-        <button className="btn" type="submit">Save Changes</button>
+        <button className="btn saveEditSkip" type="submit">Save Changes</button>
       </form>
     </div>
+      </div>
     )
   }
 }

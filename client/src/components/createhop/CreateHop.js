@@ -44,7 +44,7 @@ class CreateHop extends Component {
     return (
       <div>
           <div>
-          <Button href={`#${this.props.hopOwner}`} className="modal-trigger">
+          <Button href={`#${this.props.hopOwner}`} className="modal-trigger createNewHopBtn">
           Create new Hop
           </Button>
           <Modal id={this.props.hopOwner} className="createHopModal">  

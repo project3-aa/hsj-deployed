@@ -1,10 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Red+Hat+Display&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Red Hat Display', sans-serif;
+  /* font-family: 'Open Sans Condensed', sans-serif; */
 }
 
 code {

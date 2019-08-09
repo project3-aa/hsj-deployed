@@ -52,3 +52,7 @@
 .materialize-textarea:focus + label{
   color: #4CAF50 !important;
 }
+
+.createNewHopBtn{
+  background-color: #4CAF50 !important;
+}

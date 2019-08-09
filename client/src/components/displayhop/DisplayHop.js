@@ -60,7 +60,7 @@ class DisplayHop extends Component{
 
       <div className="eachSkipsHop">
           <div className="eachhop">
-            <h4>A Hop:</h4>
+            <h4>Hop:</h4>
               <p>Point Of Intrest: {this.props.theHopInfo.poi}</p>
               <p>Arrived by: {this.props.theHopInfo.arrivedBy}</p>
               <p>What happened: {this.props.theHopInfo.description}</p>
@@ -72,13 +72,13 @@ class DisplayHop extends Component{
            arrivedBy: this.props.theHopInfo.arrivedBy,
            description: this.props.theHopInfo.description,
          }
-       }}>Edit This Hop</Link>
-      <button
-          onClick={() => {
+       }}><i className="material-icons editHopLocation">
+       edit_location
+       </i></Link>
+
+   <i className="material-icons deleteHop" onClick={() => {
             this.deleteHop(this.props.theHopInfo._id);
-          }}>
-          Delete Hop
-        </button>
+          }}>delete</i>
           </div>
     
       </div>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './editjump.css'
 import axios from 'axios';
 
 class EditJump extends Component {
@@ -54,19 +55,37 @@ class EditJump extends Component {
 
   render(){
     return (
-    <div>
-      <form onSubmit={this.handleFormSubmit}>
-        <label>Start</label>
-        <input type="text" name="start" value={this.state.start} onChange={this.handleChange}></input>
-        <label>End</label>
-        <input type="text" name="end" value={this.state.end} onChange={this.handleChange}></input>
-        <label >duration</label>
-        <input type="number" name="duration" value={this.state.duration} onChange={this.handleChange}></input>
-        <label > description</label>
-        <input type="text" name="description" value={this.state.description} onChange={this.handleChange}></input>
-        <button className="btn" type="submit">Save Changes</button>
-      </form>
+    <div className="editJump">
+      <div className="jumpFormContent">
+        <h3>Edit Jump</h3>
+          <form onSubmit={this.handleFormSubmit}>
+
+              <div className="input-field col s12">
+                <input  type="text" className="validate" name="start" value={this.state.start} onChange={this.handleChange}/>
+                <label className="active" >Start</label>
+              </div>
+
+              <div className="input-field col s12">
+                <label className="active" htmlFor="end">End</label>
+                <input id="end" type="text" className="validate" name="end" value={this.state.end} onChange={this.handleChange}/>
+              </div>
+             
+
+              <div className="input-field col s12">
+                <label className="active" >End</label>
+                <input  type="number" className="validate" name="duration" value={this.state.duration} onChange={this.handleChange}/>
+              </div>
+            
+            <div className="input-field col s12">
+                <textarea id="textarea3" className="materialize-textarea descriptionTextArea"  name="description" value={this.state.description} onChange={this.handleChange}/>
+                <label htmlFor="textarea3">Describe Your Adventure</label>
+              </div>
+            
+            <button className="btn saveEditJump" type="submit">Save Changes</button>
+          </form>
+      </div>
     </div>
+        
     )
   }
   

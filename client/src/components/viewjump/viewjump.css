@@ -40,7 +40,7 @@
 }
 
 .editJumpLocation{
-  font-size: 55px !important;
+  font-size: 30px !important;
 }
 .editJumpBtn {
   /* background-color: #4caf50 !important; */
@@ -55,5 +55,22 @@
 
 .deleteJump{
   color: #4caf50 !important;
+  font-size: 30px !important;
+}
+
+.buttonHolder{
+  display: flex;
+  justify-content: center;
+}
+
+.titlePlane{
+  color: #4caf50 !important;
   font-size: 55px !important;
+}
+
+.jumpTitle {
+  margin-top: 70px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
 }
