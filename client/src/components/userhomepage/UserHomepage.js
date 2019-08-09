@@ -41,7 +41,7 @@ class UserHomepage extends Component {
         // return <h1>Jump Title: {eachJump.skip[0].city} ===>>> {eachJump.skip[eachJump.skip.length -1].city}</h1>
         // }
 
-        return <div key={eachJump._id} class="card eachUserCard">
+        return <div key={eachJump._id} className="card eachUserCard">
         <img src={eachJump.image} className="card-img-top" alt="..."/>
         <div className="card-body">
           <h5 className="card-title">{eachJump.start} <i  id="plane" className="material-icons prefix cardPlane">airplanemode_active</i> {eachJump.end}</h5>
@@ -88,7 +88,6 @@ class UserHomepage extends Component {
 
 
   render(){
-    console.log(this.state)
     return(
       <div className="userHome">
         <div className="userLinks">

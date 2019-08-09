@@ -72,34 +72,38 @@ class DisplaySkip extends Component {
     // console.log('this is the skip info----',this.props) //<<<<this returns info!!!!!!
     // console.log('the state-----',this.state);
     return (
+      <div className="allUserSkip"> 
       <div className="eachskip">
-        {/* {this.renderEditButton()} */}
-        <h5>{this.props.theSkipInfo.city}</h5>
-        <h5>Arrived by: {this.props.theSkipInfo.arrivedBy}</h5>
-        <h5>Days Spent: {this.props.theSkipInfo.duration}</h5>
-        <h5>How it went: {this.props.theSkipInfo.description}</h5>
-        <button><Link to={{
-          pathname: `/editSkip/${this.props.theSkipInfo.jumpOwner}`, 
-          state: {
-            skipId: this.props.theSkipInfo._id,
-            city: this.props.theSkipInfo.city,
-            arrivedBy: this.props.theSkipInfo.arrivedBy,
-            duration: this.props.theSkipInfo.duration, 
-            description: this.props.theSkipInfo.description
-          }}
-        }>Edit This Skip</Link></button>
+             <h2>Skip</h2>
+        <h4>{this.props.theSkipInfo.city}</h4>
+        <p>Arrived by: {this.props.theSkipInfo.arrivedBy}</p>
+        <p>Days Spent: {this.props.theSkipInfo.duration}</p>
+        <p>How it went: {this.props.theSkipInfo.description}</p>
+    
+          <div className="editDeleteButtons">
+
+            <Link to={{
+              pathname: `/editSkip/${this.props.theSkipInfo.jumpOwner}`, 
+              state: {
+                skipId: this.props.theSkipInfo._id,
+                city: this.props.theSkipInfo.city,
+                arrivedBy: this.props.theSkipInfo.arrivedBy,
+                duration: this.props.theSkipInfo.duration, 
+                description: this.props.theSkipInfo.description
+              }}
+            } className="editSkipBtn"><i class="material-icons editLocation">
+                  edit_location
+                  </i></Link>
+                  <i class="material-icons deleteSkip"  onClick={() => {
+                    this.deleteSkip(this.props.theSkipInfo._id);
+                  }}>delete</i>
+                  </div>
+
         {this.renderHops()}
         {this.renderHopAdd()}
-        <button
-          onClick={() => {
-            this.deleteSkip(this.props.theSkipInfo._id);
-          }}
-        >
-          Delete Skip
-        </button>
-        {/* {this.deleteSkip(this.props.theSkipInfo._id)} */}
-        {/* {this.returnHops()} */}
       </div>
+          </div>
+          
     );
   }
 }

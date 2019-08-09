@@ -57,7 +57,7 @@ class CreateSkip extends Component {
     return (
       <div>
           <div>
-          <Button href="#createSkip" className="modal-trigger">
+          <Button href="#createSkip" className="modal-trigger createNewSkip">
           Create new Skip
           </Button>
           <Modal id="createSkip">   
@@ -78,7 +78,7 @@ class CreateSkip extends Component {
               </div> */}
 
                  <Select className="arriveSelect" name="newSkipArrive" onChange={this.handleChange} required> 
-                  <option className="arriveOption" value="" active>
+                  <option className="arriveOption" value="" active="true">
                   Arrived By:
                   </option>
                   <option value="Car" >

@@ -26,15 +26,15 @@ class DisplayHop extends Component{
 
 
   render(){
-    console.log('the props in the HOPS',this.props)
     return(
-      <div>
-      <ul>
-      <li>POI: {this.props.theHopInfo.poi}</li>
-      <li>Arrived by: {this.props.theHopInfo.arrivedBy}</li>
-      <li>How it went: {this.props.theHopInfo.description}</li>
-      </ul>
-       <button><Link to={{
+
+      <div className="eachSkipsHop">
+          <div className="eachhop">
+            <h4>A Hop:</h4>
+              <p>Point Of Intrest: {this.props.theHopInfo.poi}</p>
+              <p>Arrived by: {this.props.theHopInfo.arrivedBy}</p>
+              <p>What happened: {this.props.theHopInfo.description}</p>
+       <Link to={{
          pathname: `/editHop/${this.props.jumpOwner}`,
          state:{
            hopId: this.props.theHopInfo._id,
@@ -42,13 +42,15 @@ class DisplayHop extends Component{
            arrivedBy: this.props.theHopInfo.arrivedBy,
            description: this.props.theHopInfo.description,
          }
-       }}>Edit This Hop</Link></button>
+       }}>Edit This Hop</Link>
       <button
           onClick={() => {
             this.deleteHop(this.props.theHopInfo._id);
           }}>
           Delete Hop
         </button>
+          </div>
+    
       </div>
     )
   }

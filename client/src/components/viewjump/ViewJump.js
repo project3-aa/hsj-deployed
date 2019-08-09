@@ -1,11 +1,11 @@
 import React, { Component } from "react";
+import MappyMap from '../googlemap/MapRender.js'
 import {Link} from 'react-router-dom';
 import DisplaySkip from "../displayskip/DisplaySkip.js";
 import axios from "axios";
 import "./viewjump.css";
 import EditSkip from "../editskip/EditSkip.js";
 import CreateSkip from "../createskip/CreateSkip.js";
-import MappyMap from '../googlemap/MapRender.js'
 
 class ViewJump extends Component {
   constructor(props) {
@@ -15,7 +15,10 @@ class ViewJump extends Component {
       skipCityArray: []
     };
   }
-
+  
+  componentDidMount() {
+    this.getSingleJumpInfo();
+  }
   //make axios call here for single jump
   getSingleJumpInfo = () => {
     axios
@@ -31,9 +34,6 @@ class ViewJump extends Component {
       });
   }
 
-  componentDidMount() {
-    this.getSingleJumpInfo();
-  }
 
   createTitle() {
     let skipLength = Object.keys(this.state.theJump.skip).length;
@@ -46,10 +46,10 @@ class ViewJump extends Component {
       );
     } else {
       return (
-        <h1>
+        <p className="ifNoSkips">
           Let's add at least two skips! Your first and last skip will be where
           your trip really starts and ends.{" "}
-        </h1>
+        </p>
       );
     }
   }
@@ -127,31 +127,44 @@ class ViewJump extends Component {
 
   render() {
     if (this.state.theJump) {
-      console.log('1Jump',this.state.theJump)
       return (
         <div>
           <MappyMap renderSkips={this.state.skipCityArray}/>
           {this.createTitle()}
-
           <div>
-            <h5>Flew out of: {this.state.theJump.start}</h5>
-            <h5>And returned to: {this.state.theJump.end}</h5>
-            <h3>It took {this.state.theJump.duration} days total</h3>
-            <h3>{this.state.theJump.description}</h3>
+            <div className="boxStuff">
+            <div className="oneJumpImage">
+              <img src={this.state.theJump.image} alt="..."/>
+            </div>
+         
+            <div className="jumpInOut">
+                <h2>{this.state.theJump.start}
+                <i  id="plane" className="material-icons prefix oneJumpPlane">airplanemode_active</i>
+                 {this.state.theJump.end}</h2>
+                <p>Total travel time: {this.state.theJump.duration} Days.</p>
+                <h5>{this.state.theJump.description}</h5>
+          <Link to={`/editJump/${this.state.theJump._id}`} className="editJumpBtn"><i class="material-icons editJumpLocation">
+        edit_location
+        </i></Link>
+            </div>
+            </div>
+            <hr/>
+            <div className="buttonHolder">
+            {this.renderSkipAdd()}
+            </div>
+            <hr/>
+
+         
           </div>
           {this.renderSkips()}
           <div>
-            {/* {this.renderSkipEdit()} */}
-            {this.renderSkipAdd()}
+            
           </div>
-          <button> <Link to={`/editJump/${this.state.theJump._id}`}>Edit This Jump</Link></button>
-          <button
-          onClick= {(e) => {
+
+          <i class="material-icons deleteJump"  onClick= {(e) => {
             this.deleteJump();
-          }}
-        >
-          Delete whole jump!
-        </button>
+          }}>delete</i>
+        
         </div>
       );
     } else {

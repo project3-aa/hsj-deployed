@@ -9,6 +9,9 @@
    text-align: center;
 }
 
+.createNewSkip{
+  background-color: #4CAF50 !important;
+}
 .createSkipContent{
   padding: 106px 230px !important;
 }

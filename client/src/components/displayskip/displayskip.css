@@ -1,4 +1,46 @@
-.eachskip{
-  border: 1px solid black;
-  margin: 10px;
+@import url("https://use.typekit.net/wlf2zut.css");
+
+.eachskip {
+  /* border-right: 1px solid #4caf50; */
+  border-left: 1px solid #4caf50;
+  border-bottom: 1px solid #4caf50;
+  text-align: center;
+  width: 790px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
+
+.allUserSkip{
+  display: flex;
+  justify-content: center;
+}
+
+.editLocation{
+  font-size: 30px !important;
+}
+.editSkipBtn{
+  text-align: center;
+  color: #4caf50;
+  width: 112px;
+}
+
+.deleteSkip{
+  color: #4caf50 !important;
+  font-size: 30px !important;
+}
+
+.eachskip h2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 80px;
+}
+
+.editDeleteButtons{
+  display: flex;
+  margin-left: 555px;
+}
+
