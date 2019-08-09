@@ -54,7 +54,7 @@ class Navbar extends Component {
             toggleForm = {this.toggleForm}/>}
             <li><Login {...this.props} getUser = {this.props.getUser} /></li>
             <li><Signup {...this.props} getUser = {this.props.getUser} /></li>
-            <button className="btn" onClick = {this.doTheLogout} >Log Out </button>
+            <button className="btn logOutBtn" onClick = {this.doTheLogout} >Log Out </button>
         </ul>
         </div>
      </nav>

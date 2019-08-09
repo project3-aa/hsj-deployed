@@ -26,3 +26,7 @@ nav{
 .userHomePage{
   color: black;
 }
+
+.logOutBtn{
+  background-color: #4caf50 !important;
+}
