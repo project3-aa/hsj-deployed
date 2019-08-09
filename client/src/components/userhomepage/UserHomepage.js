@@ -14,7 +14,7 @@ class UserHomepage extends Component {
   }
 
   getAllUserJumps(id){
-    
+    console.log(`${process.env.REACT_APP_BASE}/jump/userJumps/${id}`);
   axios.get(`${process.env.REACT_APP_BASE}/jump/userJumps/${id}`)
     .then((allTheJumps) => {
       this.setState({userJumps: allTheJumps.data});
