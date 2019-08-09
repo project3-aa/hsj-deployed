@@ -66,6 +66,19 @@ class HomePage extends Component {
                 </div>
             </Carousel>
 
+
+        <footer>
+        <div id="footer-info">
+        <p>This app was a team effort between Andre Cabrera and Ashley Arrue. Thank you Ironhack staff and my fellow cohorts
+        for the help and support! <br/><br/> Ironhack &nbsp; 2019 </p>
+        </div>
+
+        <div id="footer-links">
+        <a href="https://github.com/andregcab" >Andre's GitHub</a>
+        <a href="https://github.com/Ashleydarrue" >Ashley's GitHub</a>
+        </div>
+        </footer>
+
       </div>
     )
 

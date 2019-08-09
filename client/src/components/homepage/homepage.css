@@ -108,3 +108,41 @@
   margin-top: 50px;
   text-align: center;
 }
+
+
+footer {
+  bottom: 0;
+  width: 100%;
+  background-color: #49a099;
+  color: rgb(58, 57, 57);
+  height: 150px;
+  padding: 0;
+  margin: 0;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#footer-info {
+  margin-left: 20px;
+}
+
+#footer-info p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  width: 250px;
+}
+
+#footer-links {
+  display: flex;
+  flex-direction: column;
+}
+
+#footer-links a {
+  text-decoration: none;
+  color: #404443;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  width: 250px;
+  padding: 5px;
+}
