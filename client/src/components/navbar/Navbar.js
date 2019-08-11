@@ -3,7 +3,7 @@ import "./navbar.css";
 import { Link } from "react-router-dom";
 import Login from "../login/Login";
 import Signup from "../signup/Signup";
-// import { Modal, Button } from 'react-materialize';
+import { Dropdown, Button } from 'react-materialize';
 
 class Navbar extends Component {
   constructor(props) {
@@ -49,7 +49,7 @@ class Navbar extends Component {
               {this.props.theUser && (
                 <li>
                   <Link to="/userHomepage" className="userHomePage">
-                    User Homepage
+                    {this.props.theUser.username}'s profile
                   </Link>
                 </li>
               )}
@@ -61,12 +61,14 @@ class Navbar extends Component {
               )}
               {!this.props.theUser && (
                 <div>
-                  <li>
+                {/* <Dropdown trigger={<Button>Drop Me</Button>}> */}
+                <li>
                     <Login {...this.props} getUser={this.props.getUser} />
                   </li>
                   <li>
                     <Signup {...this.props} getUser={this.props.getUser} />
                   </li>
+                {/* </Dropdown> */}
                 </div>
               )}
               {this.props.theUser && (

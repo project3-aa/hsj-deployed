@@ -21,7 +21,7 @@ class HomePage extends Component {
             </h3>
           </div>
         </header>
-        <div id="mid-body" className="flex-container">
+        {/* <div id="mid-body" className="flex-container">
           <span>
             <em>Route</em>
             <br />
@@ -42,7 +42,7 @@ class HomePage extends Component {
             <br />
             your bags!
           </span>
-        </div>
+        </div> */}
 
         <div className="description">
           <h3>What is HSJ?</h3>
@@ -63,9 +63,10 @@ class HomePage extends Component {
         <Carousel
           autoPlay
           infiniteLoop
-          width="1000px"
+          // width="1000px"
           showStatus={false}
           className="carousel"
+          id="test9"
         >
           <div>
             <img

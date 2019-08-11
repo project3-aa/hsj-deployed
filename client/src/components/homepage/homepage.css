@@ -4,14 +4,14 @@
   background-image: url('/images/HSJHeader.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 500px;
+  height: 600px;
   width: 100%;
-  margin-top: -25px;
+  margin-top: 3px;
 }
 
 
 .navOneLiner h3{
-  padding-top: 330px;
+  padding-top: 400px;
   text-align: center;
   font-family: relation-two, sans-serif;
   font-weight: 400;
@@ -76,18 +76,29 @@
 }
 
 .carousel{
-  margin-left: 300px;
-  margin-top: 100px;
-  /* width: 80vw !important; */
-  margin-bottom: 100px;
+  /* margin-left: 300px; */
+   width: 100vw !important;
+  margin-bottom: 0px;
+  /* margin-left: 1px !important; */
+  margin-top: 1px !important;
+  height: 1120px !important;
+}
+
+#test9 {
+ margin-left: -1px !important;
+}
+
+
+.slider-wrapper{
+  height: 1130px !important;
 }
 
 .description{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 150px;
-  margin-bottom: 250px;
+  margin-top: 35px;
+  margin-bottom: 60px;
 }
 .description h3{
   font-size: 6em;
@@ -113,8 +124,8 @@
 footer {
   bottom: 0;
   width: 100%;
-  background-color: #49a099;
-  color: rgb(58, 57, 57);
+  background-color: #383838;
+  color: rgb(212, 211, 211);
   height: 150px;
   padding: 0;
   margin: 0;
@@ -140,7 +151,7 @@ footer {
 
 #footer-links a {
   text-decoration: none;
-  color: #404443;
+  color: rgb(212, 211, 211);
   font-family: "Montserrat", sans-serif;
   font-size: 1em;
   width: 250px;
