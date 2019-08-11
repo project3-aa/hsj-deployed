@@ -101,13 +101,24 @@ class DisplaySkip extends Component {
     }
   };
 
+  checkId() {
+    if(this.props.current % 2 === 0){
+      console.log('true')
+      return true
+    } else {
+      console.log('false')
+      return false
+    }
+  }
+
   render() {
     // console.log('this is the skip info----',this.props) //<<<<this returns info!!!!!!
-    // console.log('the state-----',this.state);
+    console.log('the key-----',this.props.current);
+    if(this.checkId()){
     return (
       <div className="allUserSkip">
-        <div className="eachskip">
-          <h2>Skip</h2>
+        <div className="skipDisplayRight">
+        <div class="markerRight"></div>
           <h4>{this.props.theSkipInfo.city}</h4>
           <p>Arrived by: {this.props.theSkipInfo.arrivedBy}</p>
           <p>Days Spent: {this.props.theSkipInfo.duration}</p>
@@ -144,6 +155,49 @@ class DisplaySkip extends Component {
         </div>
       </div>
     );
+    } else{
+      return (
+        <div className="allUserSkip">
+          <div className="eachskip">
+          <div class="marker"></div>
+            {/* <h2>Skip</h2> */}
+            <h4>{this.props.theSkipInfo.city}</h4>
+            <p>Arrived by: {this.props.theSkipInfo.arrivedBy}</p>
+            <p>Days Spent: {this.props.theSkipInfo.duration}</p>
+            <p>How it went: {this.props.theSkipInfo.description}</p>
+  
+            <div className="editDeleteButtons">
+              <Link
+                to={{
+                  pathname: `/editSkip/${this.props.theSkipInfo.jumpOwner}`,
+                  state: {
+                    skipId: this.props.theSkipInfo._id,
+                    city: this.props.theSkipInfo.city,
+                    arrivedBy: this.props.theSkipInfo.arrivedBy,
+                    duration: this.props.theSkipInfo.duration,
+                    description: this.props.theSkipInfo.description
+                  }
+                }}
+                className="editSkipBtn"
+              >
+                <i className="material-icons editLocation">edit_location</i>
+              </Link>
+              <i
+                className="material-icons deleteSkip"
+                onClick={() => {
+                  this.deleteSkip(this.props.theSkipInfo._id);
+                }}
+              >
+                delete
+              </i>
+            </div>
+  
+            {this.renderHops()}
+            {this.renderHopAdd()}
+          </div>
+        </div>
+      );
+    }
   }
 }
 

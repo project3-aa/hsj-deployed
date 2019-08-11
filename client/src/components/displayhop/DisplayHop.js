@@ -67,7 +67,7 @@ class DisplayHop extends Component {
     return (
       <div className="eachSkipsHop">
         <div className="eachhop">
-          <h4>Hop:</h4>
+          <h5>Hop:</h5>
           <p>Point Of Intrest: {this.props.theHopInfo.poi}</p>
           <p>Arrived by: {this.props.theHopInfo.arrivedBy}</p>
           <p>What happened: {this.props.theHopInfo.description}</p>

@@ -54,20 +54,23 @@ class ViewJump extends Component {
     }
   }
 
+   
+
   renderSkips() {
     if (this.state.theJump.skip) {
-      return this.state.theJump.skip.map(skip => {
-        return (
-          <DisplaySkip 
-            {...this.props}
-            key={skip._id}
-            theSkipInfo={skip}
-            theUser={this.props.theUser}
-            jumpOwner={this.state.theJump.ownerId}
-            jumpId={this.state.theJump._id}
-            showJumpAgain={this.getSingleJumpInfo}
-          />
-        );
+      return this.state.theJump.skip.map((skip, i) => {
+          return (
+            <DisplaySkip 
+              {...this.props}
+              key={skip._id}
+              current={i}
+              theSkipInfo={skip}
+              theUser={this.props.theUser}
+              jumpOwner={this.state.theJump.ownerId}
+              jumpId={this.state.theJump._id}
+              showJumpAgain={this.getSingleJumpInfo}
+            />
+          );
       });
     } else {
       return null;
@@ -178,6 +181,8 @@ class ViewJump extends Component {
             {this.renderSkipAdd()}
             </div>
             <hr/>
+              
+              <h2 className="skipTitle">SKIP</h2>
 
          
           </div>
