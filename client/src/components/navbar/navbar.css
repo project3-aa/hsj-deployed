@@ -28,5 +28,6 @@ nav{
 }
 
 .logOutBtn{
-  background-color: #4caf50 !important;
+  background-color: #4CAF50 !important;
+  border-radius: 18px !important;
 }

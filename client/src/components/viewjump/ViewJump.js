@@ -19,7 +19,7 @@ class ViewJump extends Component {
   componentDidMount() {
     this.getSingleJumpInfo();
   }
-  //make axios call here for single jump
+
   getSingleJumpInfo = () => {
     axios
       .get(
@@ -185,9 +185,6 @@ class ViewJump extends Component {
           <div>
             
           </div>
-          {/* <i className="material-icons deleteJump"  onClick= {(e) => {
-            this.deleteJump();
-          }}>delete</i> */}
         
         </div>
       );
