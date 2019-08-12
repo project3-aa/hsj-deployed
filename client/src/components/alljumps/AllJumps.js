@@ -14,7 +14,7 @@ class AllJumps extends Component {
   componentDidMount() {
     axios
       .get(`${process.env.REACT_APP_BASE}/jump/allJumps`)
-      .then(res => {
+      .then(res => {  
         this.setState({
           jumps: res.data
         });
