@@ -3,7 +3,7 @@ import "./navbar.css";
 import { Link } from "react-router-dom";
 import Login from "../login/Login";
 import Signup from "../signup/Signup";
-import { Dropdown, Button } from 'react-materialize';
+// import { Dropdown, Button } from 'react-materialize';
 
 class Navbar extends Component {
   constructor(props) {

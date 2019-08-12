@@ -103,22 +103,22 @@ class DisplaySkip extends Component {
 
   checkId() {
     if(this.props.current % 2 === 0){
-      console.log('true')
+      // console.log('true')
       return true
     } else {
-      console.log('false')
+      // console.log('false')
       return false
     }
   }
 
   render() {
     // console.log('this is the skip info----',this.props) //<<<<this returns info!!!!!!
-    console.log('the key-----',this.props.current);
+    // console.log('the key-----',this.props.current);
     if(this.checkId()){
     return (
       <div className="allUserSkip">
         <div className="skipDisplayRight">
-        <div class="markerRight"></div>
+        <div className="markerRight"></div>
           <h4>{this.props.theSkipInfo.city}</h4>
           <p>Arrived by: {this.props.theSkipInfo.arrivedBy}</p>
           <p>Days Spent: {this.props.theSkipInfo.duration}</p>
@@ -159,7 +159,7 @@ class DisplaySkip extends Component {
       return (
         <div className="allUserSkip">
           <div className="eachskip">
-          <div class="marker"></div>
+          <div className="marker"></div>
             {/* <h2>Skip</h2> */}
             <h4>{this.props.theSkipInfo.city}</h4>
             <p>Arrived by: {this.props.theSkipInfo.arrivedBy}</p>
