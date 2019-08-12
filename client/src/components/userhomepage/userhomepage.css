@@ -65,3 +65,11 @@ padding: 20px 350px;
   color: #4CAF50 !important;
   font-size: 16px !important;
 }
+
+.card-action{
+  text-align: center;
+}
+
+.homelink{
+  color:  #4CAF50 !important;;
+}

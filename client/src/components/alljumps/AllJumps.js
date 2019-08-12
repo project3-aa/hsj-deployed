@@ -30,7 +30,7 @@ class AllJumps extends Component {
       <div className="allCards">
         {this.state.jumps.map(jump => {
           return (
-            <div className="card allUserJumpsCard">
+            <div className="card allUserJumpsCard large">
               <img src={jump.image} className="card-img-top" alt="..." />
               <div className="card-body">
                 <h5 className="card-title">

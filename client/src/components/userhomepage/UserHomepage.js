@@ -37,7 +37,7 @@ class UserHomepage extends Component {
       // }
 
       return (
-        <div key={eachJump._id} className="card eachUserCard">
+        <div key={eachJump._id} className="card eachUserCard large">
           <img src={eachJump.image} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">

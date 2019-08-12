@@ -24,5 +24,13 @@
   padding: 12px 110px !important;
  }
 
+ .card-action{
+  text-align: center;
+}
+
+.homelink{
+  color:  #4CAF50 !important;;
+}
+
 
 
