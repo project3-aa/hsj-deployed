@@ -30,7 +30,7 @@
 
 #loginModal > .modal-footer {
   /* background-color: #9BC1BC !important; */
-  background-color: white !important;
+  background-color:transparent !important;
 }
 
 .login-input-field input[type=text] + label {
@@ -70,8 +70,12 @@
 }
 #loginModal > .modal-content {
   padding: 64px !important;
+  margin-top: 60px !important;
 }
 
+#loginModal{
+  max-height: 80% !important;
+}
 
 /* ^Login Modal */
 

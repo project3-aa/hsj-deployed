@@ -32,7 +32,7 @@ class Signup extends Component {
           Sign Up
         </Button>
         <Modal id="signUp">
-          <h5>Sign Up For An Account</h5>
+          <h5>Sign Up</h5>
           <form onSubmit={this.tryToSignUp}>
             <div className="signUpInput input-field col s6">
               <i className="material-icons prefix">account_circle</i>

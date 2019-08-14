@@ -17,3 +17,7 @@
   /* color: #4caf50 !important; */
   color: black !important;
 }
+
+.card.small {
+  height: 210px !important;
+}
