@@ -77,8 +77,16 @@
   justify-content: center;
 }
 
+.goUp{
+  position: fixed;
+  bottom: 30px;
+  right: 0;
+  background-color: #4caf50 !important;
+}
 
-
+.goUp a{
+  color: white !important;
+}
 
 /* @media screen and (min-width: 1025px)  {
 .jumpInOut {

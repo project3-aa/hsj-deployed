@@ -151,7 +151,7 @@ class ViewJump extends Component {
     if (this.state.theJump) {
       return (
         <div>
-          <MappyMap renderSkips={this.state.skipCityArray}/>
+          <MappyMap id="top" renderSkips={this.state.skipCityArray}/>
           {this.createTitle()}
           <div>
             <div className="boxStuff">
@@ -188,6 +188,9 @@ class ViewJump extends Component {
           </div>
           {this.renderSkips()}
           <div>
+            <button className="goUp  btn">
+            <a href="#top"><i class="material-icons"> arrow_upward</i></a>
+            </button>
             
           </div>
         
