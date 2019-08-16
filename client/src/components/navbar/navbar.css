@@ -33,3 +33,12 @@ nav{
   border-radius: 18px !important;
   color: #4CAF50 !important;
 }
+
+@media only screen and (max-width: 400px){
+  nav{
+    width: 560px !important;
+  }
+  nav ul{
+      float: right !important;
+  }
+}

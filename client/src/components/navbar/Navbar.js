@@ -45,7 +45,7 @@ class Navbar extends Component {
                 className="brand-logo center"
               />
             </Link>
-            <ul id="nav-mobile" className="right hide-on-med-and-down">
+            <ul>
               {this.props.theUser && (
                 <li>
                   <Link to="/userHomepage" className="userHomePage">

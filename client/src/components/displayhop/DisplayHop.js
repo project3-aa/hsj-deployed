@@ -66,7 +66,7 @@ class DisplayHop extends Component {
   render() {
     return (
       // <div className="eachSkipsHop">
-      <div class="card small">
+      <div className="card small">
         <div className="eachhop">
           <h5>Hop:</h5>
           <p>Point Of Intrest: {this.props.theHopInfo.poi}</p>
