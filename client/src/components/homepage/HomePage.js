@@ -14,12 +14,13 @@ class HomePage extends Component {
     return (
       <div>
         <header id="navOverlay" className="navHeader">
-          <div className="typewriter navOneLiner">
+          {/* <div className="typewriter navOneLiner">
             <h3>
               Be a travler, <br />
               not a tourist.
             </h3>
-          </div>
+          </div> */}
+          {/* <header> */}
         </header>
         {/* <div id="mid-body" className="flex-container">
           <span>

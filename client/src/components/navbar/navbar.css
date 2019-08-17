@@ -38,11 +38,47 @@ nav ul{
   color: #4CAF50 !important;
 }
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 300px){
   nav{
-    width: 560px !important;
+    width: 785px !important;
   }
   nav ul{
       float: right !important;
+  }
+
+}
+
+@media only screen and (max-width: 400px){
+  nav{
+    width: 655px !important;
+  }
+  nav ul{
+      float: right !important;
+  }
+
+}
+
+@media only screen and (max-width: 500px){
+  nav{
+    width: 561px !important;
+  }
+  nav ul{
+      float: right !important;
+  }
+
+  nav .brand-logo.center {
+    left: 15% !important;
+  }
+}
+
+@media only screen and (max-width: 700px){
+  nav{
+    width: 805px !important;
+  }
+}
+
+@media only screen and (max-width: 1000px){
+  nav{
+    width: 1025px  !important;
   }
 }

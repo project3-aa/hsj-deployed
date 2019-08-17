@@ -10,6 +10,11 @@
   box-shadow: none !important;
 }
 
+.loginBtn:hover{
+  background-color: #4CAF50 !important ;
+  color: white !important;
+}
+
 .accountLogin{
   background-color: #4CAF50 !important ;
   border-radius: 12px !important;
