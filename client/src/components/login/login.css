@@ -10,10 +10,7 @@
   box-shadow: none !important;
 }
 
-.loginBtn:hover{
-  background-color: #4CAF50 !important ;
-  color: white !important;
-}
+
 
 .accountLogin{
   background-color: #4CAF50 !important ;
@@ -82,11 +79,7 @@
   max-height: 80% !important;
 }
 
-/* ^Login Modal */
-
-
-/* @media screen and (min-width: 1025px)  {
-#loginModal > .modal-content {
-  padding: 94px !important;
+.loginBtn:hover{
+  background-color: #4CAF50 !important ;
+  color: white !important;
 }
-} */

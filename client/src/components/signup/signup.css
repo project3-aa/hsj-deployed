@@ -5,10 +5,7 @@
   box-shadow: none !important;
 }
 
-.signUpBtn:hover{
-  background-color: #4CAF50 !important ;
-  color: white !important;
-}
+
 
 .accountSignupBtn{
   background-color: #4CAF50 !important;
@@ -68,8 +65,8 @@
   color: black !important;
 }
 
-/* @media screen and (min-width: 1025px)  {
-#signUp{
-  max-height: 120%;
+
+.signUpBtn:hover{
+  background-color: #4CAF50 !important ;
+  color: white !important;
 }
-} */
