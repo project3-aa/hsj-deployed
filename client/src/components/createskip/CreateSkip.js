@@ -33,7 +33,6 @@ class CreateSkip extends Component {
       )
       .then(() => {
         this.props.showJumpAgain();
-        // console.log('we just created a skip-=-=-=-=-=-=-=-=-=-');
         this.setState({
           newSkipCity: "",
           newSkipArrive: "",
@@ -45,15 +44,11 @@ class CreateSkip extends Component {
   };
 
   handleChange = event => {
-    // console.log(event.target)
     const { name, value } = event.target;
-    // console.log(name, value)
     this.setState({ [name]: value });
-    // console.log(this.state)
   };
 
   render() {
-    // console.log(this.state)
     return (
       <div>
         <div>

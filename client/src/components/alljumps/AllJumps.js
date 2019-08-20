@@ -25,7 +25,6 @@ class AllJumps extends Component {
   }
 
   render() {
-    console.log(this.state.jumps);
     return (
       <div className="allCards">
         {this.state.jumps.map(jump => {
