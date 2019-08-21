@@ -189,7 +189,7 @@ class ViewJump extends Component {
           {this.renderSkips()}
           <div>
             <button className="goUp  btn">
-            <a href="#top"><i class="material-icons"> arrow_upward</i></a>
+            <a href="#top"><i className="material-icons"> arrow_upward</i></a>
             </button>
             
           </div>
