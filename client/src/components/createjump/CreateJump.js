@@ -165,7 +165,7 @@ class CreateJump extends Component {
           </form>
         </div>
 
-        <div>
+        {/* <div>
           <div>
             <button className="btn-floating btn-small  black">
               <i className="material-icons" onClick={() => this.onClick()}>
@@ -173,15 +173,15 @@ class CreateJump extends Component {
               </i>
             </button>
             {this.state.createSkipVisible ? <CreateSkip /> : null}
-          </div>
+          </div> */}
 
           {/* <div>
             <button className="btn-floating btn-small  black"><i className="material-icons"  onClick={() => this.onClick()}>add</i></button>
             {this.state.createSkipVisible ? <CreateSkip/>: null}
             </div> */}
-        </div>
+        {/* </div> */}
 
-        <div>
+        {/* <div>
           <div>
             <button className="btn-floating btn-small  green">
               <i className="material-icons" onClick={() => this.onClick2()}>
@@ -190,7 +190,7 @@ class CreateJump extends Component {
             </button>
             {this.state.createHopVisible ? <Hop /> : null}
           </div>
-        </div>
+        </div> */}
       </div>
     );
   }
