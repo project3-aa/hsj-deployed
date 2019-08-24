@@ -31,10 +31,6 @@ class UserHomepage extends Component {
 
   showAllUserJumps = () => {
     return this.state.userJumps.map(eachJump => {
-      // let skipLength = Object.keys(eachJump.skip).length
-      // if(skipLength > 1){
-      // return <h1>Jump Title: {eachJump.skip[0].city} ===>>> {eachJump.skip[eachJump.skip.length -1].city}</h1>
-      // }
 
       return (
         <div key={eachJump._id} className="card eachUserCard large">
@@ -60,17 +56,6 @@ class UserHomepage extends Component {
     });
   };
 
-  // <div key={eachJump._id} className='each-jump'>
-  //         <div className='jump-desc'>
-  //           <Link to={`/viewJump/${eachJump._id}`} className='homelink'>
-  //             <h5>{eachJump.start} <i  id="plane" className="material-icons prefix">airplanemode_active</i> {eachJump.end}</h5>
-  //           </Link>
-  //           <h4>{eachJump.tagline}</h4>
-  //           <p>this trip took {eachJump.duration} days</p>
-  //           <p>{eachJump.description}</p>
-  //         </div>
-  //       </div>
-  // =-=-=-=-=-=-=-=-=-=-=-
 
   getTotalUserSkips() {
     let totalUserSkips = 0;

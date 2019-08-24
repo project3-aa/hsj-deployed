@@ -73,3 +73,21 @@ padding: 20px 350px;
 .homelink{
   color:  #4CAF50 !important;;
 }
+
+@media only screen and (max-width: 300px){
+  .allUserCards {
+      margin-left: 280px;
+    }   
+}
+
+@media only screen and (max-width: 400px){
+  .allUserCards {
+    margin-left: 280px;
+  }  
+}
+
+@media only screen and (max-width: 500px){
+  .allUserCards {
+    margin-left: 280px;
+  }
+}

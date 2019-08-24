@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 // import {Link, NavLink} from 'react-router-dom';
 import axios from "axios";
-import Hop from "../createhop/CreateHop.js";
-import CreateSkip from "../createskip/CreateSkip.js";
+// import Hop from "../createhop/CreateHop.js";
+// import CreateSkip from "../createskip/CreateSkip.js";
 import("./createjump.css");
 
 class CreateJump extends Component {
