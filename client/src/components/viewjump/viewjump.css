@@ -99,4 +99,5 @@
 #test{
   float: left;
   flex-basis: 0cm;
+  flex-direction: column-reverse;
 }
