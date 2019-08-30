@@ -88,16 +88,16 @@
   color: white !important;
 }
 
-/* @media screen and (min-width: 1025px)  {
+@media screen and (min-width: 1025px)  {
 .jumpInOut {
   display: flex;
   flex-direction: column;
   width: 1041px;
 }
-} */
+} 
 
 /* #test{
   float: left;
   flex-basis: 0cm;
   flex-direction: column-reverse;
-} */
+}
