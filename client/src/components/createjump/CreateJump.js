@@ -28,7 +28,7 @@ class CreateJump extends Component {
     newJump.append("endCity", this.state.newEnd);
     newJump.append("jumpDuration", this.state.newDuration);
     newJump.append("jumpDescription", this.state.newDescription);
-    console.log(this.state);
+    // console.log(this.state);
     axios
       .post(`${process.env.REACT_APP_BASE}/jump/newJump`, newJump, {
         headers: {
@@ -94,14 +94,14 @@ class CreateJump extends Component {
   }
 
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     return (
       <div>
         <div className="createJump" />
         <div className="move">
           <form onSubmit={this.handleFormSubmit}>
-            <div className="input-field col s6">
-              <i id="plane" className="material-icons prefix">
+            <div className="input-field col s6 createJumpInput">
+              <i id="plane" className="material-icons prefix ">
                 airplanemode_active
               </i>
               <input
@@ -116,7 +116,7 @@ class CreateJump extends Component {
               <label htmlFor="icon_plane">City of departure</label>
             </div>
 
-            <div className="input-field col s6">
+            <div className="input-field col s6 createJumpInput">
               <i id="plane" className="material-icons prefix">
                 airplanemode_active
               </i>
@@ -132,7 +132,7 @@ class CreateJump extends Component {
               <label htmlFor="icon_plane2">City of arrival </label>
             </div>
 
-            <div className="input-field col s12">
+            <div className="input-field col s12 createJumpInput">
               <input
                 id="duration"
                 type="number"
@@ -145,7 +145,7 @@ class CreateJump extends Component {
               <label htmlFor="duration">Duration (in days)</label>
             </div>
 
-            <div className="input-field col s12">
+            <div className="input-field col s12 createJumpInput">
               <textarea
                 id="textarea1"
                 className="materialize-textarea"
@@ -156,12 +156,17 @@ class CreateJump extends Component {
               />
               <label htmlFor="textarea1">Description</label>
             </div>
-
-            <div className="input-field col s12">
-              <legend style={{ marginTop: "100px" }}>Choose a Picture</legend>
+    
+              <div className="buttonsCenter">
+            {/* <div className="input-field col s12"> */}
+            <div className="file-field input-field">
+              <legend className="addImage" style={{ marginTop: "20px" }}>Add a Picture</legend>
               <input type="file" onChange={this.updateFileInState} />
+              </div>
+            {/* </div> */}
+            <button className="btn createJumpBtn">Create Jump</button>
             </div>
-            <button className="btn waves-effect waves-dark">Create Jump</button>
+            
           </form>
         </div>
 

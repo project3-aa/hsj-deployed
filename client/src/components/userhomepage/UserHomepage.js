@@ -73,13 +73,16 @@ class UserHomepage extends Component {
   render() {
     return (
       <div className="userHome">
+        
         <div className="userLinks">
           <Link to="/createJump">CREATE A NEW JUMP</Link>
           <Link to="/allJumps">ALL JUMPS</Link>
         </div>
+
         <hr />
 
         <p>Travler {this.props.theUser.username}</p>
+       
         <div className="lifeTime">
           <p> {this.getTotalUserJumps()} lifetime Jumps</p>
           <hr />

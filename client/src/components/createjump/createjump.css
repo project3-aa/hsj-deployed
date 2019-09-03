@@ -1,19 +1,18 @@
 .createJump{
-    margin-top: 20px;
-    margin-bottom: 100px;
-    background-image: url(/images/boardingPass.png);
+    background-image: url(/images/modalImage.jpeg);
     background-repeat: no-repeat;
-    height: 600px;
-    background-size: contain;
-    margin-left: 160px;
+    height: 700px;
+    background-size: cover;
 }
 .move {
-  margin-top: -600px;
-  margin-left: 190px;
-  margin-bottom: 250px;
+  margin-top: -450px;
+ display: flex;
+ justify-content: center;
+ margin-left: 100px;
 }
-.input-field{
-  width: 700px;
+
+.createJumpInput{
+  width: 900px !important;
 }
 
 #plane {
@@ -35,3 +34,21 @@
   justify-content: center;
   margin-top: -150px;
 }
+
+.addImage{
+  margin-left: 23px;
+  border: 1px solid  #4CAF50;
+  border-radius: 12px;
+  padding: 5px 5px;
+  /* background-color: #4CAF50 !important; */
+  color: black;
+}
+
+.createJumpBtn{
+  background-color: #4CAF50 !important;
+}
+
+.buttonsCenter{
+  margin-left: 400px;
+}
+ 
