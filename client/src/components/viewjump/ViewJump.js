@@ -150,7 +150,7 @@ class ViewJump extends Component {
   render() {
     if (this.state.theJump) {
       return (
-        <div>
+        <div className="mapContainer">
           <MappyMap id="top" renderSkips={this.state.skipCityArray}/>
           {this.createTitle()}
           <div>

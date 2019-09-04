@@ -50,8 +50,8 @@ hr{
 }
 
 .lifeTime{
-display: flex;
-padding: 20px 350px;
+ display: flex;
+ padding: 20px 350px;
 }
 
 .lifeTime p {
@@ -73,20 +73,36 @@ padding: 20px 350px;
 .homelink{
   color:  #4CAF50 !important;;
 }
+
 @media only screen and (max-width: 300px){
-  .allUserCards {
-      margin-left: 280px;
-    }   
+  .eachUserCard{
+    margin: 0px 0px 0px 0px ;
+    /* width: 50rem !important; */
+   }
+  .lifeTime {
+    display: flex;
+    padding: 0px 0px;
+ } 
 }
 
 @media only screen and (max-width: 400px){
-  .allUserCards {
-    margin-left: 280px;
-  }  
+  .eachUserCard{
+    margin: 0px 0px 0px 0px ;
+    /* width: 50rem !important; */
+   }
+  .lifeTime {
+    display: flex;
+    padding: 0px 0px;
+ }  
 }
 
 @media only screen and (max-width: 500px){
-  .allUserCards {
-    margin-left: 280px;
-  }
+  .eachUserCard{
+    margin: 0px 0px 0px 0px ;
+    /* width: 50rem !important; */
+   }
+  .lifeTime {
+    display: flex;
+    padding: 0px 0px;
+ } 
 }

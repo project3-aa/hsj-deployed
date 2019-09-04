@@ -72,7 +72,7 @@ class UserHomepage extends Component {
 
   render() {
     return (
-      <div className="userHome">
+      <div className="userHome center-align">
         
         <div className="userLinks">
           <Link to="/createJump">CREATE A NEW JUMP</Link>

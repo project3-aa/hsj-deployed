@@ -14,36 +14,7 @@ class HomePage extends Component {
     return (
       <div>
         <header id="navOverlay" className="navHeader">
-          {/* <div className="typewriter navOneLiner">
-            <h3>
-              Be a travler, <br />
-              not a tourist.
-            </h3>
-          </div> */}
-          {/* <header> */}
         </header>
-        {/* <div id="mid-body" className="flex-container">
-          <span>
-            <em>Route</em>
-            <br />
-            Visualization
-          </span>
-          <span>
-            <em>Travel</em>
-            <br />
-            Reimagined
-          </span>
-          <span>
-            <em>Discover</em>
-            <br />
-            New things
-          </span>
-          <span>
-            <em>Pack</em>
-            <br />
-            your bags!
-          </span>
-        </div> */}
 
         <div className="description">
           <h3>What is HSJ?</h3>

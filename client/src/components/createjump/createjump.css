@@ -51,4 +51,63 @@
 .buttonsCenter{
   margin-left: 400px;
 }
+
+@media only screen and (max-width: 300px){
+  .createJump {
+      width: 1020px;
+  } 
+  .move {
+    margin-top: -507px;
+    display: flex;
+    justify-content: center;
+    margin-left: 580px;
+  }
+
+  .createJumpInput{
+    width: 700px !important;
+  }
+  .buttonsCenter {
+    margin-left: 230px;
+}
+}
+
+@media only screen and (max-width: 400px){
+  .createJump {
+    width: 1020px;
+   } 
+
+   .move {
+    margin-top: -507px;
+    display: flex;
+    justify-content: center;
+    margin-left: 580px;
+  }
+  .createJumpInput{
+    width: 700px !important;
+  }
+  .buttonsCenter {
+    margin-left: 230px;
+}
+}
+
+@media only screen and (max-width: 500px){
+  .createJump {
+    width: 1020px;
+  } 
+
+  .createJumpInput{
+    width: 700px !important;
+  }
+
+  .move {
+    margin-top: -507px;
+    display: flex;
+    justify-content: center;
+    margin-left: 580px;
+  }
+  .buttonsCenter {
+    margin-left: 230px;
+}
+}
+
  

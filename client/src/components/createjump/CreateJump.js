@@ -50,31 +50,7 @@ class CreateJump extends Component {
       .catch(error => console.log(error));
   };
 
-  // under axios.post before cloudinary
-  // startCity: this.state.newStart,
-  // endCity: this.state.newEnd,
-  // jumpDuration: this.state.newDuration,
-  // jumpDescription: this.state.newDescription,
-
-  //   axios.post("http://localhost:5000/api/jump/newJump", {
-  //     startCity: this.state.newStart,
-  //     endCity: this.state.newEnd,
-  //     jumpDuration: this.state.newDuration,
-  //     jumpDescription: this.state.newDescription,
-  //   }, {withCredentials: true})
-  //   .then((theCreatedJump) => {
-  //     // this.props.getData();
-  //     //this function updates something
-  //     this.props.history.push('/viewJump/' + theCreatedJump.data._id)
-  //       this.setState({
-  //         newStart: "",
-  //         newEnd: "",
-  //         newDuration: 0,
-  //         newDescription: "",
-  //       });
-  //   })
-  //   .catch (error => console.log(error))
-  // }
+  
 
   handleChange = event => {
     const { name, value } = event.target;
