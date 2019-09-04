@@ -33,4 +33,37 @@
 }
 
 
+@media only screen and (max-width: 300px){
+  .allUserJumpsCard{
+    margin: 0px 0px 0px 0px ;
+    /* width: 50rem !important; */
+   }
+   .allCards {
+    padding: 0px 0px !important;
+ }
+ 
+}
+
+@media only screen and (max-width: 400px){
+  .allUserJumpsCard{
+    margin: 0px 0px 0px 0px ;
+    /* width: 50rem !important; */
+   }
+   .allCards {
+    padding: 0px 0px !important;
+ }
+    
+}
+
+@media only screen and (max-width: 500px){
+  .allUserJumpsCard{
+    margin: 0px 0px 0px 0px ;
+    /* width: 50rem !important; */
+   }
+   .allCards {
+    padding: 0px 0px !important;
+ }
+ 
+}
+
 
