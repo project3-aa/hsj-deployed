@@ -107,9 +107,3 @@
       width: 1040px;
     }
   }
-  
-  @media only screen and (max-width: 500px){
-    .mapContainer{
-      width: 1040px;
-    }
-  }
