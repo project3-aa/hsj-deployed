@@ -10,8 +10,6 @@
   box-shadow: none !important;
 }
 
-
-
 .accountLogin{
   background-color: #4CAF50 !important ;
   border-radius: 12px !important;
@@ -20,18 +18,16 @@
 }
 
 #loginModal {
-  /* background-color: #9BC1BC !important; */
   background-image: url('/images/modalImage.jpeg') !important;
   background-size: cover;
-  /* opacity: 0.8 !important; */
 }
+
 #loginModal h5{
   text-align: center !important;
   color: black !important;
 }
 
 #loginModal > .modal-footer {
-  /* background-color: #9BC1BC !important; */
   background-color:transparent !important;
 }
 
@@ -80,6 +76,6 @@
 }
 
 .loginBtn:hover{
-  background-color: #4CAF50 !important ;
+  background-color: #4CAF50 !important;
   color: white !important;
 }
