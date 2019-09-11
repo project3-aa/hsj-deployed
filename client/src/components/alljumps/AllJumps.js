@@ -7,7 +7,9 @@ class AllJumps extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      jumps: []
+      query: "",
+      jumps: [], 
+      filteredJumps: []
     };
   }
 
@@ -24,8 +26,33 @@ class AllJumps extends Component {
       });
   }
 
+  handleInputChange = event => {
+    const query = event.target.value;
+
+    this.setState(prevState => {
+      const filteredData = prevState.data.filter(element => {
+        return element.name.toLowerCase().includes(query.toLowerCase());
+      });
+
+      return {
+        query,
+        filteredData
+      };
+    });
+  };
+
   render() {
     return (
+      <div>
+        <div className="search-bar">
+        <form>
+          <input
+            placeholder="Search for..."
+            value={this.state.query}
+            onChange={this.handleInputChange}
+          />
+        </form>
+      </div>
       <div className="allCards">
         {this.state.jumps.map(jump => {
           return (
@@ -54,6 +81,7 @@ class AllJumps extends Component {
             </div>
           );
         })}
+      </div>
       </div>
     );
   }
