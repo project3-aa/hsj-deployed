@@ -30,8 +30,8 @@ class AllJumps extends Component {
     const query = event.target.value;
 
     this.setState(prevState => {
-      const filteredData = prevState.data.filter(element => {
-        return element.name.toLowerCase().includes(query.toLowerCase());
+      const filteredData = prevState.data.filter(jump => {
+        return jump.name.toLowerCase().includes(query.toLowerCase());
       });
 
       return {
